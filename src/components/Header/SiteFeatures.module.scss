@@ -1,0 +1,19 @@
+@use "../../styles/variables" as *;
+
+.liWrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 20px;
+}
+
+.text {
+  font-size: 12px;
+  font-weight: 500;
+  color: $color-gray;
+}
+
+.textHighlighted {
+  font-weight: 600;
+  color: $color-violet;
+}

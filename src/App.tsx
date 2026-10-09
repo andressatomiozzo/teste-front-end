@@ -1,11 +1,11 @@
-import React from 'react'
 import Header from "./components/Header/Heather"
+import "./styles/global.scss"
 
 const App = () => {
   return (
-    <div>
+    <>
       <Header/>
-    </div>
+    </>
   )
 }
 

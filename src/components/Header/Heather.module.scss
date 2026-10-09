@@ -1,0 +1,14 @@
+@use "../../styles/variables" as *;
+
+.topBar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 764px;
+  margin: auto;
+  padding: 0 1rem;
+
+  @media(max-width: 570px){
+    flex-direction: column;
+  }
+}
