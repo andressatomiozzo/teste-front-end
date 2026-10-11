@@ -13,9 +13,11 @@ import FavIcon from "../../assets/Icons/Heart.svg?react";
 import UserIcon from "../../assets/Icons/UserCircle.svg?react";
 import ShoppingIcon from "../../assets/Icons/ShoppingCart.svg?react";
 import CrownIcon from "../../assets/Icons/CrownSimple.svg?react";
+import useMedia from "../../Hooks/useMedia";
 
 const Heather = () => {
   const [inputValue, setInputValue] = React.useState<string>("");
+  const media765 = useMedia("(max-width: 765px)");
 
   return (
     <header>
@@ -28,22 +30,28 @@ const Heather = () => {
         <Link to="/" className={style.logo}>
           <LogoIcon />
         </Link>
-        <form className={style.form}>
-          <label htmlFor="search" className="visually-hidden">
-            Buscar produtos
-          </label>
-          <input
-            type="text"
-            id="search"
-            name="search"
-            placeholder="O que você está buscando?"
-            value={inputValue}
-            onChange={({ target }) => setInputValue(target.value)}
-          />
-          <button>
+        {media765 ? (
+          <button className={style.formButton}>
             <SearchIcon />
           </button>
-        </form>
+        ) : (
+          <form className={style.form}>
+            <label htmlFor="search" className="visually-hidden">
+              Buscar produtos
+            </label>
+            <input
+              type="text"
+              id="search"
+              name="search"
+              placeholder="O que você está buscando?"
+              value={inputValue}
+              onChange={({ target }) => setInputValue(target.value)}
+            />
+            <button>
+              <SearchIcon />
+            </button>
+          </form>
+        )}
         {/* prettier-ignore */}
         <nav>
           <ul className={style.mainBarIcons}>
@@ -60,7 +68,8 @@ const Heather = () => {
           <li><Link to="produtos/todasCategorias">Todas categorias</Link></li>
           <li><Link to="produtos/supermercado">Supermercado</Link></li>
           <li><Link to="produtos/livros">Livros</Link></li>
-          <li><Link to="produtos/moda">moda</Link></li>
+          <li><Link to="produtos/moda">Moda</Link></li>
+          <li><Link to="produtos/lancamentos">Lançamentos</Link></li>
           <li><Link to="/" className={style.active}>Ofertas do dia</Link></li>
           <li><Link to="assinatura"><CrownIcon />Assinatura</Link></li>
         </ul>

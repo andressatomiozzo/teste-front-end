@@ -16,16 +16,35 @@
 .mainBar {
   display: grid;
   grid-template-columns: 1fr 630px 1fr;
+  gap: 39px;
   align-items: center;
   max-width: 1280px;
   margin: auto;
   padding: 12px;
   border-top: 1px solid $color-N10;
   border-bottom: 1px solid $color-N10;
+
+  @media (max-width: 1050px) {
+    grid-template-columns: 150px 1fr 217px;
+  }
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+}
+
+.mainBar > nav {
+  @media (max-width: 500px) {
+    grid-column: 1 / -1;
+  }
 }
 
 .logo:hover * {
   stroke: transparent;
+}
+
+.formButton {
+  margin-left: auto;
 }
 
 .form {
@@ -70,10 +89,18 @@
 .sectionsNavBar {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 35px;
   max-width: 1280px;
-  height: 40px;
   margin: auto;
+  padding: 10px 35px;
   box-shadow: 0 8px 16px 0 rgb(57, 48, 19, 12%);
+
+  @media (max-width: 700px) {
+      padding: 10px 20px;
+        gap:  10px 35px;
+
+  }
 }
 
 .sectionsNavBar > li,
