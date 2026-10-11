@@ -53,7 +53,7 @@ const Heather = () => {
           </form>
         )}
         {/* prettier-ignore */}
-        <nav>
+        <nav aria-label="Atalhos da conta">
           <ul className={style.mainBarIcons}>
             <li><Link to="rastreio"><TrackingIcon /></Link></li>
             <li><Link to="favoritos"><FavIcon /></Link></li>
@@ -62,7 +62,7 @@ const Heather = () => {
           </ul>
         </nav>
       </div>
-      <nav>
+      <nav aria-label="Principais categorias de produtos">
         {/* prettier-ignore */}
         <ul className={style.sectionsNavBar}>
           <li><Link to="produtos/todasCategorias">Todas categorias</Link></li>
