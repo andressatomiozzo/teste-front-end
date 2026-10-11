@@ -1,4 +1,4 @@
-import style from "./HeroBanner.module.scss"
+import style from "./HeroBanner.module.scss";
 import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
@@ -10,10 +10,11 @@ const HeroBanner = () => {
           <p>
             <strong>50% Off</strong> nos produtos
           </p>
-          <Link to="/" className={style.button}>Ver produto</Link>
+          <Link to="/" className={style.button}>
+            Ver produto
+          </Link>
         </div>
       </div>
-      <nav></nav>
     </section>
   );
 };

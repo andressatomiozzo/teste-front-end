@@ -72,9 +72,12 @@
   height: 48px;
 }
 
+.form button:focus {
+  outline:none;
+}
+
 .form:has(input:focus),
 .form:focus {
-  border: $color-highlight;
   outline: 1px solid $color-highlight;
 }
 
@@ -83,6 +86,10 @@
   align-items: center;
   justify-content: end;
   gap: 2rem;
+}
+
+.mainBarIcons svg:hover * {
+  stroke: $color-highlight;
 }
 
 .mainBarIcons li:first-child:hover * {

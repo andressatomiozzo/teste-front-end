@@ -1,0 +1,17 @@
+@use "../../styles/variables" as *;
+
+
+.content{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 42px;
+  margin: 40px auto 90px auto;
+}
+
+.content .active *{
+  color: $color-highlight;
+  background-color: $color-N00;
+  font-weight: 600;
+}
