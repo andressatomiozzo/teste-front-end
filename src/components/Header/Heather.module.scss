@@ -13,7 +13,7 @@
   }
 }
 
-.mainBar{
+.mainBar {
   display: grid;
   grid-template-columns: 1fr 630px 1fr;
   align-items: center;
@@ -24,7 +24,11 @@
   border-bottom: 1px solid $color-N10;
 }
 
-.form{
+.logo:hover * {
+  stroke: transparent;
+}
+
+.form {
   background-color: $color-beige-light;
   display: flex;
   align-items: center;
@@ -37,23 +41,56 @@
   outline: none;
   background-color: transparent;
   width: 100%;
-  color: $color-gray;
+  color: $color-text-light;
 }
 
-.form button{
+.form button {
   padding: 10px 25px;
   height: 48px;
 }
 
 .form:has(input:focus),
 .form:focus {
-  border: $color-violet;
-  outline: 1px solid $color-violet;
+  border: $color-highlight;
+  outline: 1px solid $color-highlight;
 }
 
-.mainBarIcons{
+.mainBarIcons {
   display: flex;
   align-items: center;
   justify-content: end;
   gap: 2rem;
+}
+
+.mainBarIcons li:first-child:hover * {
+  stroke: transparent;
+  fill: $color-highlight;
+}
+
+.sectionsNavBar {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1280px;
+  height: 40px;
+  margin: auto;
+  box-shadow: 0 8px 16px 0 rgb(57, 48, 19, 12%);
+}
+
+.sectionsNavBar > li,
+.sectionsNavBar > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: $color-text-light;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.sectionsNavBar .active,
+.sectionsNavBar li:hover * {
+  color: $color-highlight;
+  stroke: $color-highlight;
 }

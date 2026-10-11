@@ -32,7 +32,7 @@ input {
   border: none;
 }
 
-button{
+button {
   cursor: pointer;
   background: none;
 }
@@ -47,9 +47,12 @@ ul {
 }
 
 *:focus {
-  border: $color-violet;
-  outline: 1px solid $color-gray;
+  outline: 1px solid $color-text-light;
   border-radius: 5px;
+}
+
+svg:hover * {
+  stroke: $color-highlight;
 }
 
 .visually-hidden {

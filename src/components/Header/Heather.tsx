@@ -12,6 +12,7 @@ import TrackingIcon from "../../assets/Icons/Tracking.svg?react";
 import FavIcon from "../../assets/Icons/Heart.svg?react";
 import UserIcon from "../../assets/Icons/UserCircle.svg?react";
 import ShoppingIcon from "../../assets/Icons/ShoppingCart.svg?react";
+import CrownIcon from "../../assets/Icons/CrownSimple.svg?react";
 
 const Heather = () => {
   const [inputValue, setInputValue] = React.useState<string>("");
@@ -24,7 +25,9 @@ const Heather = () => {
         <SiteFeatures icon={<CreditCardIcon />} textBefore="Parcele " textHighlighted="suas compras" />
       </ul>
       <div className={style.mainBar}>
-        <Link to="/"><LogoIcon /></Link>
+        <Link to="/" className={style.logo}>
+          <LogoIcon />
+        </Link>
         <form className={style.form}>
           <label htmlFor="search" className="visually-hidden">
             Buscar produtos
@@ -51,6 +54,17 @@ const Heather = () => {
           </ul>
         </nav>
       </div>
+      <nav>
+        {/* prettier-ignore */}
+        <ul className={style.sectionsNavBar}>
+          <li><Link to="produtos/todasCategorias">Todas categorias</Link></li>
+          <li><Link to="produtos/supermercado">Supermercado</Link></li>
+          <li><Link to="produtos/livros">Livros</Link></li>
+          <li><Link to="produtos/moda">moda</Link></li>
+          <li><Link to="/" className={style.active}>Ofertas do dia</Link></li>
+          <li><Link to="assinatura"><CrownIcon />Assinatura</Link></li>
+        </ul>
+      </nav>
     </header>
   );
 };
