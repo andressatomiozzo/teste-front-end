@@ -31,7 +31,7 @@ const Heather = () => {
           <LogoIcon />
         </Link>
         {media765 ? (
-          <button className={style.formButton}>
+          <button className={style.formButton} aria-label="Buscar produtos">
             <SearchIcon />
           </button>
         ) : (
@@ -47,7 +47,7 @@ const Heather = () => {
               value={inputValue}
               onChange={({ target }) => setInputValue(target.value)}
             />
-            <button>
+            <button aria-label="Buscar produtos" onClick={(e) => e.preventDefault()}>
               <SearchIcon />
             </button>
           </form>
@@ -55,10 +55,10 @@ const Heather = () => {
         {/* prettier-ignore */}
         <nav aria-label="Atalhos da conta">
           <ul className={style.mainBarIcons}>
-            <li><Link to="rastreio"><TrackingIcon /></Link></li>
-            <li><Link to="favoritos"><FavIcon /></Link></li>
-            <li><Link to="usuario"><UserIcon /></Link></li>
-            <li><Link to="carrinho"><ShoppingIcon /></Link></li>
+            <li><Link to="rastreio" aria-label="Rastreio"><TrackingIcon /></Link></li>
+            <li><Link to="favoritos" aria-label="Itens favoritos"><FavIcon /></Link></li>
+            <li><Link to="usuario" aria-label="Minha conta"><UserIcon /></Link></li>
+            <li><Link to="carrinho" aria-label="Rastreio"><ShoppingIcon /></Link></li>
           </ul>
         </nav>
       </div>

@@ -58,9 +58,13 @@
 .form input {
   padding: 10px;
   outline: none;
-  background-color: transparent;
+  background-color: transparent !important;
   width: 100%;
   color: $color-text-light;
+}
+
+.form input:focus {
+  color: $color-text;
 }
 
 .form button {
