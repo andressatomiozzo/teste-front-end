@@ -29,12 +29,11 @@ button,
 input {
   font-family: inherit;
   color: inherit;
+  border: none;
 }
 
-button,
-input {
+button{
   cursor: pointer;
-  border: none;
   background: none;
 }
 

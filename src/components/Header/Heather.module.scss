@@ -1,14 +1,58 @@
 @use "../../styles/variables" as *;
 
-.topBar{
+.topBar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 764px;
-  margin: auto;
+  margin: 6px auto;
   padding: 0 1rem;
 
-  @media(max-width: 570px){
+  @media (max-width: 570px) {
     flex-direction: column;
   }
+}
+
+.mainBar{
+  display: grid;
+  grid-template-columns: 1fr 630px 1fr;
+  align-items: center;
+  max-width: 1280px;
+  margin: auto;
+  padding: 12px;
+  border-top: 1px solid $color-N10;
+  border-bottom: 1px solid $color-N10;
+}
+
+.input{
+  background-color: $color-beige-light;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.input input {
+  padding: 10px;
+  outline: none;
+  background-color: transparent;
+  width: 100%;
+  color: $color-gray;
+}
+
+.input button{
+  padding: 10px 25px;
+  height: 48px;
+}
+
+.input:has(input:focus),
+.input:focus {
+  border: 1px solid black;
+  outline: 1px solid black;
+}
+
+.mainBarIcons{
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 2rem;
 }
