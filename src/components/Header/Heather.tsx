@@ -24,7 +24,7 @@ const Heather = () => {
         <SiteFeatures icon={<CreditCardIcon />} textBefore="Parcele " textHighlighted="suas compras" />
       </ul>
       <div className={style.mainBar}>
-        <LogoIcon />
+        <Link to="/"><LogoIcon /></Link>
         <form className={style.input}>
           <label htmlFor="search" className="visually-hidden">
             Buscar produtos
@@ -44,10 +44,10 @@ const Heather = () => {
         {/* prettier-ignore */}
         <nav>
           <ul className={style.mainBarIcons}>
-            <li><Link to="/"><TrackingIcon /></Link></li>
-            <li><Link to="/"><FavIcon /></Link></li>
-            <li><Link to="/"><UserIcon /></Link></li>
-            <li><Link to="/"><ShoppingIcon /></Link></li>
+            <li><Link to="rastreio"><TrackingIcon /></Link></li>
+            <li><Link to="favoritos"><FavIcon /></Link></li>
+            <li><Link to="usuario"><UserIcon /></Link></li>
+            <li><Link to="carrinho"><ShoppingIcon /></Link></li>
           </ul>
         </nav>
       </div>

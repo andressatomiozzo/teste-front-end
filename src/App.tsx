@@ -2,6 +2,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./styles/global.scss";
 import Header from "./components/Header/Heather";
 import Home from "./Pages/Home/Home";
+import ErrorNoPageFound from "./Pages/Error/ErrorNoPageFound";
+import Footer from "./components/Footer/Footer";
 
 const App = () => {
   return (
