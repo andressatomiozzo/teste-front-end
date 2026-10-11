@@ -25,7 +25,7 @@ const Heather = () => {
       </ul>
       <div className={style.mainBar}>
         <Link to="/"><LogoIcon /></Link>
-        <form className={style.input}>
+        <form className={style.form}>
           <label htmlFor="search" className="visually-hidden">
             Buscar produtos
           </label>

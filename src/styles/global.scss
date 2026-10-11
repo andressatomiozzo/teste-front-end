@@ -46,6 +46,12 @@ ul {
   list-style: none;
 }
 
+*:focus {
+  border: $color-violet;
+  outline: 1px solid $color-gray;
+  border-radius: 5px;
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;

@@ -24,14 +24,15 @@
   border-bottom: 1px solid $color-N10;
 }
 
-.input{
+.form{
   background-color: $color-beige-light;
   display: flex;
   align-items: center;
   border-radius: 10px;
+  border: 1px solid transparent;
 }
 
-.input input {
+.form input {
   padding: 10px;
   outline: none;
   background-color: transparent;
@@ -39,15 +40,15 @@
   color: $color-gray;
 }
 
-.input button{
+.form button{
   padding: 10px 25px;
   height: 48px;
 }
 
-.input:has(input:focus),
-.input:focus {
-  border: 1px solid black;
-  outline: 1px solid black;
+.form:has(input:focus),
+.form:focus {
+  border: $color-violet;
+  outline: 1px solid $color-violet;
 }
 
 .mainBarIcons{
