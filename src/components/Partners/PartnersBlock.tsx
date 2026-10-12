@@ -9,7 +9,7 @@ type IPartnersBlock = {
 const PartnersBlock = ({ bgimage, partnerName, description }: IPartnersBlock) => {
   return (
     <article style={{ backgroundImage: `url(${bgimage})` }} className={style.container}>
-      <h2 className={style.title}>{partnerName}</h2>
+      <h3 className={style.title}>{partnerName}</h3>
       <span className={style.description}>{description}</span>
       <button className={style.button}>Confira</button>
     </article>

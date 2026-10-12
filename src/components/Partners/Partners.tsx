@@ -7,7 +7,7 @@ import partnerImg from "../../assets/img/partnerImage.png"
 const Partners = () => {
   return (
     <section className={style.container}>
-      <h1 className="visually-hidden">Nossos Parceiros</h1>
+      <h2 className="visually-hidden">Nossos Parceiros</h2>
       <PartnersBlock
         bgimage={partnerImg}
         partnerName="Parceiros"

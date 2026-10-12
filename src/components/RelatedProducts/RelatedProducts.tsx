@@ -28,7 +28,7 @@ const RelatedProducts = ({ all }: { all: boolean }) => {
         </ul>
         </nav>
       ) : (
-        <Link to="/">Ver Todos</Link>
+        <Link to="/" className={style.seeMore}>Ver Todos</Link>
       )}
       <div className={style.carouselContainer} > 
         <button onClick={() => handleClick(indexAtual - 1)}><PrevArrowIcon/></button>

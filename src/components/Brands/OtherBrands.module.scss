@@ -1,0 +1,17 @@
+.container {
+  width: 1230px;
+  margin: 32px auto 90px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  height: 211px;
+  width: 211px;
+  box-shadow: 0px 7px 20px 0px rgba(0, 0, 0, 13%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}

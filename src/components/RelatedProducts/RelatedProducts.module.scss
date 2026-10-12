@@ -57,6 +57,15 @@
   font-weight: 700;
 }
 
+.seeMore {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  font-size: 15px;
+  font-weight: 700;
+  color: $color-gray-dark;
+}
+
 .carouselContainer {
   max-width: 1385px;
   display: flex;
