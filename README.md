@@ -24,7 +24,7 @@ O desafio foi criar um site igual ao design disponibilizado pela empreza.
 
 ## 👤 Como interagir com o projeto
 
-Acesse o [Link](https://dogs-wine.vercel.app/)
+Acesse o [Link](https://teste-front-end-9jww.vercel.app/)
 
 <br>
 
