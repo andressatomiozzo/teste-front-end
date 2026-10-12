@@ -1,13 +1,24 @@
+import React from "react";
+import { createPortal } from 'react-dom';
+
 import styles from "./CarouselIcon.module.scss";
+import ProductModal from "../Modal/ProductModal";
 
 type ICarrouselIcon = {
   src: string;
   alt: string;
   productName: string;
   price: number;
+  index: number
 };
 
-const CarouselIcon = ({ src, alt, productName, price }: ICarrouselIcon) => {
+const CarouselIcon = ({ src, alt, productName, price, index }: ICarrouselIcon) => {
+  const [modal, setModal] = React.useState<boolean>(false);
+  const [produtoIndex, setProdutoIndex] = React.useState<number | null>(null)
+  const handleBuyClick = () => {
+    setModal(true)
+    setProdutoIndex(index)
+  }
   return (
     <li className={styles.container}>
       <img src={src} alt={alt} className={styles.img} />
@@ -35,7 +46,8 @@ const CarouselIcon = ({ src, alt, productName, price }: ICarrouselIcon) => {
         </span>
         <span className={styles.freeDeliv}>Frete Grátis</span>
       </div>
-      <button className={styles.buyBtn}>Comprar</button>
+      <button className={styles.buyBtn} onClick={handleBuyClick}>Comprar</button>
+      {modal && createPortal(<ProductModal setModal={setModal} index={produtoIndex}/>, document.getElementById("root")!)}
     </li>
   );
 };

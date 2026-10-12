@@ -9,7 +9,7 @@ import LinkedinIcon from "../../assets/Icons/Linkedin.svg?react";
 
 const Footer = () => {
   return (
-    <footer className={style.container}>
+    <footer className={style.container} id="portal-root">
       <div className={style.content}>
         <div className={style.companyInfo}>
           <span className={style.logo} aria-label="Econverse Logo">

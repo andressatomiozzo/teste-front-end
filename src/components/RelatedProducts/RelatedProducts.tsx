@@ -41,6 +41,7 @@ const RelatedProducts = ({ all }: { all: boolean }) => {
                   alt={product.descriptionShort}
                   productName={product.productName}
                   price={product.price}
+                  index={i}
                 />
               ))
             : null}
