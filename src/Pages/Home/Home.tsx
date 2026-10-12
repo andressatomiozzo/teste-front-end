@@ -7,7 +7,7 @@ const Home = () => {
     <>
       <HeroBanner/>
       <AllProductCategories/>
-      <RelatedProducts/>
+      <RelatedProducts all={true}/>
     </>
   )
 }

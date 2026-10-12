@@ -1,14 +1,24 @@
+import { Link } from "react-router-dom";
 import { useProducts } from "../../context/ProductsContext";
+import useCarrossel from "../../Hooks/useCarrossel";
 import style from "./RelatedProducts.module.scss";
+import CarouselIcon from "../Carousel/CarouselIcon";
 
-const RelatedProducts = () => {
+import NextArrowIcon from "../../assets/Icons/NextArrow.svg?react"
+import PrevArrowIcon from "../../assets/Icons/PrevArrow.svg?react"
+
+const RelatedProducts = ({ all }: { all: boolean }) => {
   const { data } = useProducts();
+  const { indexAtual, handleClick } = useCarrossel(data?.products);
+
+
   return (
     <section>
       <h2 className={`title ${style.title}`}>Produtos relacionados</h2>
-      <nav aria-label="Categorias de produtos relacionados">
-        {/* prettier-ignore */}
-        <ul className={style.relatedCategories}>
+      {all ? (
+        <nav aria-label="Categorias de produtos relacionados">
+          {/* prettier-ignore */}
+          <ul className={style.relatedCategories}>
           <li className={style.active}><button>Celular</button></li>
           <li><button>Acessórios</button></li>
           <li><button>Tablets</button></li>
@@ -16,7 +26,27 @@ const RelatedProducts = () => {
           <li><button>TVS</button></li>
           <li><button>Ver todos</button></li>
         </ul>
-      </nav>
+        </nav>
+      ) : (
+        <Link to="/">Ver Todos</Link>
+      )}
+      <div className={style.carouselContainer} > 
+        <button onClick={() => handleClick(indexAtual - 1)}><PrevArrowIcon/></button>
+        <ul className={style.viewport}>
+          {data?.products
+            ? data.products.filter((_, i) => i >= indexAtual && i < indexAtual + 4).map((product, i) => (
+                <CarouselIcon
+                  key={i}
+                  src={product.photo}
+                  alt={product.descriptionShort}
+                  productName={product.productName}
+                  price={product.price}
+                />
+              ))
+            : null}
+        </ul>
+        <button onClick={() => handleClick(indexAtual + 1)}><NextArrowIcon/></button>
+      </div>
     </section>
   );
 };
