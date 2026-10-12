@@ -3,6 +3,7 @@ import AllProductCategories from '../../components/AllProductCategories/AllProdu
 import RelatedProducts from '../../components/RelatedProducts/RelatedProducts'
 import Partners from '../../components/Partners/Partners'
 import OtherBrands from '../../components/Brands/OtherBrands'
+import NewsLetter from '../../components/NewsLetter/NewsLetter'
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <Partners/>
       <OtherBrands/>
       <RelatedProducts all={false}/>
+      <NewsLetter/>
     </>
   )
 }
