@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+
+.container {
+  background-color: $color-N20;
+  padding-top: 60px;
+}
+
+.content {
+  width: 1280px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 80px 60px 0px;
+}
+
+.companyInfo {
+  max-width: 350px;
+}
+
+.logo {
+  margin-bottom: 20px;
+}
+
+.companyInfo p {
+  color: $color-gray-dark;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.socialIcons {
+  display: flex;
+  gap: 15px;
+}
+
+.socialIcons a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: $color-gray-dark;
+}
+
+.links {
+  display: flex;
+  gap: 80px;
+  position: relative;
+}
+
+.links::before {
+  content: "";
+  width: 1px;
+  height: 198px;
+  position: absolute;
+  left: -90px;
+  top: -41px;
+  background-color: rgba(40, 40, 40, 18%);
+}
+
+.linkColumn h3 {
+  font-size: 16px;
+  color: $color-N90;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+.linkColumn li {
+  margin-bottom: 15px;
+}
+
+.linkColumn a {
+  color: $color-N90;
+  font-size: 14px;
+  &:hover {
+    color: $color-gray-dark;
+  }
+}
+
+.bottom {
+  background-color: $color-N00;
+  text-align: center;
+  padding: 20px;
+}
+
+.bottom p {
+  color: $color-gray-dark;
+  font-size: 0.85rem;
+}
