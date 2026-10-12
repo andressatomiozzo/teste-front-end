@@ -3,7 +3,6 @@ import style from "./RelatedProducts.module.scss";
 
 const RelatedProducts = () => {
   const { data } = useProducts();
-  console.log(data)
   return (
     <section>
       <h2 className={`title ${style.title}`}>Produtos relacionados</h2>
