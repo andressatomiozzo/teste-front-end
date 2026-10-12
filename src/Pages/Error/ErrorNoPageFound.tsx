@@ -1,11 +1,11 @@
-import React from 'react'
-
 const ErrorNoPageFound = () => {
   return (
     <div>
-      erro
+      <h1>Erro</h1>
+      <p>Essa página ainda não existe.</p>
+      <p>Volte para a página principal clicando na logo.</p>
     </div>
-  )
-}
+  );
+};
 
-export default ErrorNoPageFound
+export default ErrorNoPageFound;

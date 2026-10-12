@@ -46,11 +46,6 @@ ul {
   list-style: none;
 }
 
-*:focus {
-  outline: 1px solid $color-text-light;
-  border-radius: 5px;
-}
-
 .visually-hidden {
   position: absolute;
   width: 1px;
