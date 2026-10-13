@@ -14,4 +14,8 @@
   align-items: center;
   justify-content: center;
   border-radius: 50%;
+
+  &:hover {
+    transform: translateY(-10px);
+  }
 }

@@ -32,12 +32,15 @@
 .socialIcons {
   display: flex;
   gap: 15px;
-}
 
-.socialIcons a {
-  font-size: 1.5rem;
-  text-decoration: none;
-  color: $color-gray-dark;
+  a {
+    font-size: 1.5rem;
+    text-decoration: none;
+
+    &:hover *{
+      stroke: $color-accent;
+    }
+  }
 }
 
 .links {

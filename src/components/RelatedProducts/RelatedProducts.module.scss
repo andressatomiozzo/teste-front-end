@@ -40,6 +40,10 @@
   &:not(:last-child) {
     border-right: none;
   }
+
+  &:hover:not(.active) {
+    border: 1px solid $color-highlight;
+  }
 }
 
 .relatedCategories button {
@@ -50,6 +54,10 @@
   font-size: 16px;
   font-weight: 400;
   text-transform: uppercase;
+
+  &:hover {
+    color: $color-highlight;
+  }
 }
 
 .relatedCategories .active button {

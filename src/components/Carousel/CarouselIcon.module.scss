@@ -55,4 +55,8 @@
   height: 44px;
   border-radius: 4px;
   margin-top: 12px;
+
+  &:hover {
+    background-color: $color-highlight;
+  }
 }
