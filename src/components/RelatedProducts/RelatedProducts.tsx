@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
-import { useProducts } from "../../context/ProductsContext";
-import useCarrossel from "../../Hooks/useCarrossel";
 import style from "./RelatedProducts.module.scss";
+import { useProducts } from "../../context/ProductsContext";
 import CarouselIcon from "../Carousel/CarouselIcon";
+import useCarrossel from "../../Hooks/useCarrossel";
 
-import NextArrowIcon from "../../assets/Icons/NextArrow.svg?react"
-import PrevArrowIcon from "../../assets/Icons/PrevArrow.svg?react"
+import NextArrowIcon from "../../assets/icons/nextArrow.svg?react"
+import PrevArrowIcon from "../../assets/icons/prevArrow.svg?react"
 
 const RelatedProducts = ({ all }: { all: boolean }) => {
   const { data } = useProducts();

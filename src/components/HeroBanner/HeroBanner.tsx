@@ -1,5 +1,5 @@
-import style from "./HeroBanner.module.scss";
 import { Link } from "react-router-dom";
+import style from "./HeroBanner.module.scss";
 
 const HeroBanner = () => {
   return (

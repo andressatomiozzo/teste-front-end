@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import LogoIcon from "../../assets/Icons/Logo.svg?react";
 import style from "./OtherBrands.module.scss"
+import LogoIcon from "../../assets/icons/logo.svg?react";
 
 const OtherBrands = () => {
   return (

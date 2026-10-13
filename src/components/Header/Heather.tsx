@@ -2,18 +2,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SiteFeatures from "./SiteFeatures";
 import style from "./Heather.module.scss";
-
-import CheckIcon from "../../assets/Icons/ShieldCheck.svg?react";
-import TruckIcon from "../../assets/Icons/Truck.svg?react";
-import CreditCardIcon from "../../assets/Icons/CreditCard.svg?react";
-import LogoIcon from "../../assets/Icons/Logo.svg?react";
-import SearchIcon from "../../assets/Icons/MagnifyingGlass.svg?react";
-import TrackingIcon from "../../assets/Icons/Tracking.svg?react";
-import FavIcon from "../../assets/Icons/Heart.svg?react";
-import UserIcon from "../../assets/Icons/UserCircle.svg?react";
-import ShoppingIcon from "../../assets/Icons/ShoppingCart.svg?react";
-import CrownIcon from "../../assets/Icons/CrownSimple.svg?react";
 import useMedia from "../../Hooks/useMedia";
+
+import CheckIcon from "../../assets/icons/header/shieldCheck.svg?react";
+import TruckIcon from "../../assets/icons/header/truck.svg?react";
+import CreditCardIcon from "../../assets/icons/header/CreditCard.svg?react";
+import LogoIcon from "../../assets/icons/logo.svg?react";
+import SearchIcon from "../../assets/icons/header/search.svg?react";
+import TrackingIcon from "../../assets/icons/header/tracking.svg?react";
+import FavIcon from "../../assets/icons/header/heart.svg?react";
+import UserIcon from "../../assets/icons/header/userCircle.svg?react";
+import ShoppingIcon from "../../assets/icons/header/shoppingCart.svg?react";
+import CrownIcon from "../../assets/icons/header/crownSimple.svg?react";
 
 const Heather = () => {
   const [inputValue, setInputValue] = React.useState<string>("");

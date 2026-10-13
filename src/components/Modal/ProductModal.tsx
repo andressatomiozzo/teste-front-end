@@ -1,7 +1,7 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import style from "./ProductModal.module.scss";
 import { useProducts } from "../../context/ProductsContext";
-import { Link } from "react-router-dom";
 
 type IProductModal = {
   setModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -48,7 +48,9 @@ const ProductModal = ({ setModal, index }: IProductModal) => {
             })}
           </p>
           <span className={style.description}>{product!.descriptionShort}</span>
-          <Link to="/" className={style.link}>Veja mais detalhes do produto &gt;</Link>
+          <Link to="/" className={style.link}>
+            Veja mais detalhes do produto &gt;
+          </Link>
           <div className={style.btns}>
             <div className={style.quantityContainerBtn}>
               {quantity === 1 ? (

@@ -1,21 +1,25 @@
-import style from "./AllProductCategories.module.scss"
+import style from "./AllProductCategories.module.scss";
 import ProductCategory from "./ProductCategory";
 
-
-import TecnologyIcon from "../../assets/Icons/Technology.svg?react";
-import SupermarketIcon from "../../assets/Icons/Supermarket.svg?react";
-import DrinkIcon from "../../assets/Icons/Whiskey.svg?react";
-import ToolsIcon from "../../assets/Icons/Tools.svg?react";
-import HealthIcon from "../../assets/Icons/HealthCare.svg?react";
-import SportsIcon from "../../assets/Icons/Run.svg?react";
-import ModaIcon from "../../assets/Icons/Moda.svg?react";
+import TecnologyIcon from "../../assets/icons/productSections/technology.svg?react";
+import SupermarketIcon from "../../assets/icons/productSections/supermarket.svg?react";
+import DrinkIcon from "../../assets/icons/productSections/whiskey.svg?react";
+import ToolsIcon from "../../assets/icons/productSections/tools.svg?react";
+import HealthIcon from "../../assets/icons/productSections/healthCare.svg?react";
+import SportsIcon from "../../assets/icons/productSections/run.svg?react";
+import ModaIcon from "../../assets/icons/productSections/moda.svg?react";
 
 const AllProductCategories = () => {
   return (
     <section>
       <nav aria-label="compre por categoria">
         <ul className={style.content}>
-          <ProductCategory url="produtos/tecnologia" icon={<TecnologyIcon />} category="Tecnologia" className={style.active}/>
+          <ProductCategory
+            url="produtos/tecnologia"
+            icon={<TecnologyIcon />}
+            category="Tecnologia"
+            className={style.active}
+          />
           <ProductCategory url="produtos/supermercado" icon={<SupermarketIcon />} category="Supermercado" />
           <ProductCategory url="produtos/bebidas" icon={<DrinkIcon />} category="Bebidas" />
           <ProductCategory url="produtos/ferramentas" icon={<ToolsIcon />} category="Ferramentas" />

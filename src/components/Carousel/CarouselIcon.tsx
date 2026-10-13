@@ -1,7 +1,7 @@
 import React from "react";
 import { createPortal } from 'react-dom';
 
-import styles from "./CarouselIcon.module.scss";
+import style from "./CarouselIcon.module.scss";
 import ProductModal from "../Modal/ProductModal";
 
 type ICarrouselIcon = {
@@ -20,23 +20,23 @@ const CarouselIcon = ({ src, alt, productName, price, index }: ICarrouselIcon) =
     setProdutoIndex(index)
   }
   return (
-    <li className={styles.container}>
-      <img src={src} alt={alt} className={styles.img} />
-      <h3 className={styles.productName}>{productName}</h3>
-      <div className={styles.priceDiv}>
-        <span className={styles.priceBefore}>
+    <li className={style.container}>
+      <img src={src} alt={alt} className={style.img} />
+      <h3 className={style.productName}>{productName}</h3>
+      <div className={style.priceDiv}>
+        <span className={style.priceBefore}>
           {(price / 100).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
         </span>
-        <strong className={styles.priceNow}>
+        <strong className={style.priceNow}>
           {(price * 0.00935).toLocaleString("pt-BR", {
             style: "currency",
             currency: "BRL",
           })}
         </strong>
-        <span className={styles.price2x}>
+        <span className={style.price2x}>
           ou 2x de
           {(price / 200).toLocaleString("pt-BR", {
             style: "currency",
@@ -44,9 +44,9 @@ const CarouselIcon = ({ src, alt, productName, price, index }: ICarrouselIcon) =
           })}{" "}
           sem juros
         </span>
-        <span className={styles.freeDeliv}>Frete Grátis</span>
+        <span className={style.freeDeliv}>Frete Grátis</span>
       </div>
-      <button className={styles.buyBtn} onClick={handleBuyClick}>Comprar</button>
+      <button className={style.buyBtn} onClick={handleBuyClick}>Comprar</button>
       {modal && createPortal(<ProductModal setModal={setModal} index={produtoIndex}/>, document.getElementById("root")!)}
     </li>
   );

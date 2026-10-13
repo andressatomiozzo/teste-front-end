@@ -1,8 +1,7 @@
-import style from "./Partner.module.scss"
+import style from "./Partner.module.scss";
 import PartnersBlock from "./PartnersBlock";
 
-import partnerImg from "../../assets/img/partnerImage.png"
-
+import partnerImg from "../../assets/img/partnerImage.png";
 
 const Partners = () => {
   return (
