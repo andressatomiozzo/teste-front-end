@@ -59,13 +59,13 @@
 .button {
   padding: 13px 55px;
   background-color: $color-accent;
-  color: $color-purple;
+  color: $color-contrast;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 600;
 }
 
 .button:hover {
-  background-color: $color-purple;
+  background-color: $color-contrast;
   color: $color-accent;
 }

@@ -5,8 +5,6 @@ $color-beige-light: #f6f5f2;
 $color-gray: #9f9f9f;
 $color-gray-dark: #3f3f40;
 $color-violet: #3019b2;
-$color-bg-modal: rgba(0, 0, 0, 0.54);
-$color-shadow: rgba(0, 0, 0, 0.22);
 
 $color-N00: #ffffff;
 $color-N10: #f0f0f0;
@@ -21,11 +19,11 @@ $color-N90: rgba(34, 34, 34, 0.71);
 $color-N100: #000000;
 
 $color-primary: $color-blue;
-$color-accent: $color-yellow;
 $color-highlight: $color-violet;
+$color-accent: $color-yellow;
+$color-contrast: $color-purple;
 $color-text: $color-N80;
 $color-text-light: $color-gray;
-$color-divider: $color-N30;
 
 $font-family: "Poppins", sans-serif;
 $font-family-secondary: "Work Sans", sans-serif;
